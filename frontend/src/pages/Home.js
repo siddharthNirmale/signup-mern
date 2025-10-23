@@ -23,7 +23,7 @@ function Home() {
 
    const fetchProducts = async () => {
         try {
-            const url = "http://localhost:8080/products";
+            const url = "https://signup-mern-six.vercel.app/products";
 
             
             const headers = {

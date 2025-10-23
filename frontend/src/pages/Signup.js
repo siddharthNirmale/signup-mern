@@ -18,7 +18,7 @@ const Signup = ({ setIsAuthenticated }) => { // Receive setIsAuthenticated as pr
         if (!name || !email || !password) return handleError("Name, email, and password are required");
 
         try {
-            const url = "http://localhost:8080/auth/signup";
+            const url = "https://signup-mern-six.vercel.app/auth/signup";
             const response = await fetch(url, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
