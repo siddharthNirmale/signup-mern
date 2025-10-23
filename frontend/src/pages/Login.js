@@ -31,11 +31,11 @@ function Login({ setIsAuthenticated }) { // Receive setIsAuthenticated as prop
             });
 
             const result = await response.json();
-            const { success, message, jwtToken, name, error } = result;
+            const { success, message, name, error ,token} = result;
 
             if (success) {
                 handleSuccess(message);
-                localStorage.setItem('token', jwtToken);
+                localStorage.setItem('token', token);
                 localStorage.setItem('loggedInUser', name);
                 setIsAuthenticated(true); // Update auth state immediately
                 setTimeout(() => navigate('/home'), 500);
