@@ -29,7 +29,7 @@ function Home() {
             const headers = {
                  'Authorization': `Bearer ${localStorage.getItem('token')}`
             };
-            const response = await fetch(url, { headers });
+            const response = await fetch(url, { headers }); 
             const result = await response.json();
             console.log(result);
             setProducts(result);
